@@ -26,10 +26,14 @@ b {
   /* Gallery section */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* you only want one fractional unit for the smallest view */
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem;
-    justify-content: center;
+    /* justify-content: center; */
+    max-width: 1000px;
+    place-items: center;
+    margin: 0 auto;
   }
 
 .gallery-figure {
@@ -51,7 +55,7 @@ b {
 
   
   /* Responsive styles */
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) { /* you should "usually" always use min-width for media queries */
   .gallery {
       grid-template-columns: repeat(2, 1fr); 
       justify-content: center;
@@ -63,5 +67,15 @@ b {
   }
 }
 
+@media screen and (min-width: 1000px) { /* you should "usually" always use min-width for media queries */
+  .gallery {
+      grid-template-columns: repeat(3, 1fr); 
+      justify-content: center;
+  }
 
+  .gallery figure {
+      width: 200px; 
+      height: 200px;
+  }
+}
   

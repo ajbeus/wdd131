@@ -1,10 +1,11 @@
 
-  const menuButton = document.querySelector(".menu-button");
+const menuButton = document.querySelector(".menu-button");
+const gallery = document.querySelector(".gallery")
 
-  function toggleMenu() {
-    const menu = document.querySelector(".menu");
-    menu.classList.toggle("hide");
-  }
+function toggleMenu() {
+  const menu = document.querySelector(".menu");
+  menu.classList.toggle("hide");
+}
 
   menuButton.addEventListener("click", () => toggleMenu());
 
@@ -23,13 +24,24 @@ window.addEventListener("resize", handleResize);
 function viewerTemplate(pic, alt) {
   return `<div class="viewer">
     <button class="close-viewer">X</button>
-    <img src="${norris-sm.jpeg}" alt="${picture}">
+    <img src="${pic}" alt="${alt}">
   </div>`;
 }
 
 function viewHandler(event) {
+  const clickedImg = event.target;
+  const imgSrc = clickedImg.getAttribute('src').split('-');
+  const modalImgSrc = imgSrc[0] + '-full.jpeg'
+  document.body.insertAdjacentHTML('afterbegin', viewerTemplate(modalImgSrc, clickedImg.alt))
+  document.querySelector(".close-viewer").addEventListener("click", closeViewer);
+}
+
+function viewhandler(event) {
+
 }
 
 function closeViewer() {
   document.querySelector(".viewer").remove();
 }
+
+gallery.addEventListener('click', viewHandler);

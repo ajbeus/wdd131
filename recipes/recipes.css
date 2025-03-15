@@ -82,11 +82,13 @@ footer{
 }
 
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 32px;
-    }
-    
     .recipe-card {
-        max-width: 400px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+    .recipe-card img {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 }

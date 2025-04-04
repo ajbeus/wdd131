@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Try Something New!</title>
+</head>
+<body>
+    <header>
+        <a id="logo_link" href="index.html">
+            <img class="logo" src="images/logo.png" alt="Hobbies logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="page2.html">Try Something New!</a>
+        </nav>
+    </header>
+    <h1 class="title">Try Something New!</h1>
+    <nav>
+        <button onclick="showHobby('Skating')">Skating</button>
+        <button onclick="showHobby('Gaming')">Gaming</button>
+        <button onclick="showHobby('Coding')">Coding</button>
+        <button onclick="showHobby('Singing')">Singing</button>
+        <button onclick="showHobby('Dancing')">Dancing</button>
+        <button onclick="showHobby('Cars')">Cars</button>
+    </nav>
+
+    <main>
+        <div class="hobby-container">
+            <div class="hobby-main">
+              <h1 id="hobby-title"></h1>
+              <img id="hobby-image" src="" alt="hobby image">
+              <p id="hobby-description"></p>
+            </div>
+            <div class="hobby-more">
+              <h2>More Info</h2>
+              <div id="hobby-details"></div>
+            </div>
+          </div>
+          
+          <div id="hobby-buttons"></div>
+    </main>
+
+    <footer>
+        <p><a href="site-plan.html">Site Plan</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>

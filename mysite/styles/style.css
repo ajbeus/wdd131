@@ -87,12 +87,13 @@ footer {
 }
 
 footer a {
-    color: var(--accent1-color);
+    color: var(--accent2-color);
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+    color: var(--accent1-color);
 }
 
 button {
